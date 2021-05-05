@@ -5,11 +5,10 @@ import { Todo } from '../typescript/interfaces';
 export default function ListItem({ todo }: { todo: Todo }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>{todo.title}</Text>
-      {todo.location && (
+      {todo && (
         <Text style={styles.text}>
           {' '}
-          - {todo.location.lat}, {todo.location.lng}
+          - {todo.latitude}, {todo.longitude}
         </Text>
       )}
     </View>

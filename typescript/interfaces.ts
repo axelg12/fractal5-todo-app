@@ -1,7 +1,4 @@
 export interface Todo {
-  location?: {
-    lat: number;
-    lng: number;
-  };
-  title: string;
+  latitude: number;
+  longitude: number;
 }
