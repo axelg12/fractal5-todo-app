@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "ios": {
+      "bundleIdentifier": "com.app.fractal5",
+      "infoPlist": {
+        "NSLocationAlwaysUsageDescription": "stuff",
+        "NSLocationWhenInUseUsageDescription": "stuff",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "stuff"
+      }
+    }
+  }
+}
