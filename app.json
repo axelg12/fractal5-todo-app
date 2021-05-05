@@ -3,6 +3,7 @@
     "ios": {
       "bundleIdentifier": "com.app.fractal5",
       "infoPlist": {
+        "UIBackgroundModes": ["location"],
         "NSLocationAlwaysUsageDescription": "stuff",
         "NSLocationWhenInUseUsageDescription": "stuff",
         "NSLocationAlwaysAndWhenInUseUsageDescription": "stuff"

@@ -115,6 +115,7 @@ export default function App() {
   }, []);
 
   const getLocation = async () => {
+    const { status: foregroundStatus } = await Location.requestForegroundPermissionsAsync();
     const { status } = await Location.requestBackgroundPermissionsAsync();
     if (status !== 'granted') {
       setPermission(false);
