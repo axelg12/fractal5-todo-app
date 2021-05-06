@@ -1,17 +1,26 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Todo } from '../typescript/interfaces';
 
-export default function ListItem({ todo }: { todo: Todo }) {
+export default function ListItem({
+  todo,
+  navigation,
+  location,
+}: {
+  todo: any;
+  navigation: any;
+  location: any;
+}) {
   return (
-    <View style={styles.container}>
-      {todo && (
-        <Text style={styles.text}>
-          {' '}
-          - {todo.latitude}, {todo.longitude}
-        </Text>
-      )}
-    </View>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={() => {
+        navigation.navigate('Edit', { todo, location });
+      }}
+    >
+      {todo && <Text style={styles.text}>{todo.description}</Text>}
+    </TouchableOpacity>
   );
 }
 
@@ -34,6 +43,6 @@ const styles = StyleSheet.create({
     shadowRadius: 2.62,
   },
   text: {
-    fontSize: 20,
+    fontSize: 16,
   },
 });

@@ -1,4 +1,12 @@
 export interface Todo {
-  latitude: number;
-  longitude: number;
+  description: string;
+  location: string;
+}
+export interface ILocation {
+  coordinates?: {
+    latitude: number;
+    longitude: number;
+  };
+  id: string;
+  name: string;
 }
